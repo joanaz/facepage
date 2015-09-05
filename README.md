@@ -35,8 +35,10 @@
 :angry:
 :trollface:
 
--
 
+A magical recommendation system
+
+-
 ### Throughput
 [![Throughput Graph](https://graphs.waffle.io/joanaz/facepage/throughput.svg)](https://waffle.io/joanaz/facepage/metrics)
 

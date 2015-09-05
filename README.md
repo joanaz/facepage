@@ -36,7 +36,7 @@
 :trollface:
 
 
-A magical recommendation system
+A small data recommendation system
 
 -
 ### Throughput

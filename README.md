@@ -34,7 +34,9 @@
 :trollface:
 
 
+
+
 > ###Throughput
->[![Throughput Graph](https://graphs.waffle.io/joanaz/facepage/throughput.svg)](https://waffle.io/joanaz/facepage/metrics)
+[![Throughput Graph](https://graphs.waffle.io/joanaz/facepage/throughput.svg)](https://waffle.io/joanaz/facepage/metrics)
 
 

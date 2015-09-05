@@ -3,6 +3,8 @@
 [![Stories in In Progress](https://badge.waffle.io/joanaz/facepage.svg?label=In%20Progress&title=In%20Progress)](http://waffle.io/joanaz/facepage) 
 [![GitHub commits](https://img.shields.io/github/commits-since/joanaz/facepage/0.0.1.svg?style=plastic)]()
 
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> are supported
+- 
 # facepage
 
 Throughput

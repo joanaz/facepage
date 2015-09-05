@@ -4,8 +4,34 @@
 [![GitHub commits](https://img.shields.io/github/commits-since/joanaz/facepage/0.0.1.svg?style=plastic)]()
 # facepage
 :smile:
-:angry:
+:laughing:
+:smirk:
+:satisfied:
+:grin:
+:wink:
+:stuck_out_tongue_winking_eye:
+:stuck_out_tongue_closed_eyes:
+:sleeping:
 :worried:
+:anguished:
+:confused:
+:hushed:
+:expressionless:
+:unamused:
+:sweat_smile:
+:sweat:
+:disappointed:
+:confounded:
+:fearful:
+:persevere:
+:cry:
+:sob:
+:astonished:
+:sunglasses:
+:neutral_face:
+:innocent:
+:angry:
+:trollface:
 
 ### Throughput
 [![Throughput Graph](https://graphs.waffle.io/joanaz/facepage/throughput.svg)](https://waffle.io/joanaz/facepage/metrics) 

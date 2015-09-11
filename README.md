@@ -3,6 +3,9 @@
 
 # facepage
 
+This is [an example][id] reference-style link.
+
+
 :smile:
 :laughing:
 :smirk:
@@ -33,6 +36,9 @@
 :angry:
 :trollface:
 
+
+
+[id]: http://example.com/  "Optional Title Here"
 
 A small data recommendation system
 

@@ -3,11 +3,6 @@
 
 # facepage
 
-This is [an example](http://example.com/ "Title") inline link.
-
-This is [an example][id] reference-style link.
-
-
 :smile:
 :laughing:
 :smirk:
@@ -38,9 +33,6 @@ This is [an example][id] reference-style link.
 :angry:
 :trollface:
 
-
-
-[id]: http://example.com/  "Optional Title Here"
 
 A small data recommendation system
 

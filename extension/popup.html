@@ -1,0 +1,159 @@
+<!--
+This page is shown when the extension button is clicked, because the
+"browser_action" field in manifest.json contains the "default_popup" key with
+value "popup.html".
+- JavaScript and HTML must be in separate files: see our Content Security
+- Policy documentation[1] for details and explanation.
+-
+- [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>Facepage</title>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://localhost:8000/">Facepage</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="http://localhost:8000/dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="http://localhost:8000/topic/donald-trump">Timelines</a>
+          </li>
+          <!-- <li>
+            <a href="#">
+              <i class="glyphicon glyphicon-thumbs-up"></i>
+            </a>
+          </li> -->
+          <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Action</a>
+              </li>
+              <li>
+                <a href="#">Another action</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <!-- <img id="image-result" hidden> -->
+    <section>
+      <!-- <h5 align="center">Entities & concepts in the current article</h5> -->
+      <p id="status"></p>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Entity</th>
+            <th>Relevance</th>
+            <!-- <th>Username</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a id="entity1" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="relevance1"></span></td>
+            <!-- <td>@mdo</td> -->
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a id="entity2" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="relevance2"></span></td>
+            <!-- <td>@fat</td> -->
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a id="entity3" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="relevance3"></span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a id="entity4" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="relevance4"></span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><a id="entity5" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="relevance5"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Concept</th>
+            <th>Relevance</th>
+            <!-- <th>Username</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a id="concept1" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="crelevance1"></span></td>
+            <!-- <td>@mdo</td> -->
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a id="concept2" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="crelevance2"></span></td>
+            <!-- <td>@fat</td> -->
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a id="concept3" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="crelevance3"></span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a id="concept4" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="crelevance4"></span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><a id="concept5" href="http://localhost:8000/topic/donald-trump"></a></td>
+            <td><span id="crelevance5"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div align="center">
+        <button id="addButton" class="btn btn-primary">Add current page to database</button>
+      </div>
+    </section>
+    <!-- <h5>Article concepts:</h5>
+    <ul>
+      <li><a id="concept1" href=""></a> <small>Relevance: <span id="crelevance1"></span></small></li>
+      <li><a id="concept2" href=""></a> <small>Relevance: <span id="crelevance2"></span></small></li>
+      <li><a id="concept3" href=""></a> <small>Relevance: <span id="crelevance3"></span></small></li>
+      <li><a id="concept4" href=""></a> <small>Relevance: <span id="crelevance4"></span></small></li>
+      <li><a id="concept5" href=""></a> <small>Relevance: <span id="crelevance5"></span></smal l></li>
+    </ul>-->
+    <!-- <h1 id="news-title" ></h1> -->
+    <!-- <p id="news-url"></p> -->
+    <!-- <h3 id="news-content" ></h3> -->
+  </body>
+</html>

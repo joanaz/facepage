@@ -1,4 +1,52 @@
 <section id="home">
-    <fullstack-logo></fullstack-logo>
-    <rando-greeting></rando-greeting>
+  <!-- <facepage-logo></facepage-logo> -->
+  <!-- <rando-greeting></rando-greeting> 
+  interval="myInterval" no-wrap="noWrapSlides"-->
+
+<carousel interval="5000">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
+
+
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/USA_TV_News_Simulation_1.jpg" alt="...">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="http://tvnewsroom.org/wp-content/section-images/wallpapers/bbc-world-news-wallpaper-16-9.jpg" alt="...">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="http://a.fastcompany.net/multisite_files/fastcompany/poster/2015/03/3044187-poster-p-1-the-other-shoe-drops-facebook-wants-to-host-news-sites-content-inside-facebook.jpg" alt="...">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

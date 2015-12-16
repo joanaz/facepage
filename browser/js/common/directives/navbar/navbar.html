@@ -1,17 +1,61 @@
-<nav class="navbar navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <fullstack-logo></fullstack-logo>
-        </div>
-        <ul class="nav navbar-nav">
-            <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
-                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
-            </li>
-        </ul>
-        <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-        <div ng-show="user" class="welcome">
-            <span>Welcome, {{ user.email }}!</span>
-            <a ng-click="logout()">Logout</a>
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid facepage-navbar">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand facepage-logo" ui-sref-active="active" ui-sref="home">
+        <img alt="Brand" src="http://static1.squarespace.com/static/52937216e4b01184fc04afb6/t/5584b45ce4b040d94305fd14/1434760285732/facebooktransparent.png" width="30" />
+      </a>
+      <!-- <facepage-logo></facepage-logo> -->
     </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
+          <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Timelines <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="item in timelineItems">
+              <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Summarized Timelines <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="item in summarizedTimelineItems">
+              <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-search search-only">
+          <i class="search-icon glyphicon glyphicon-search"></i>
+          <input type="text" class="form-control search-query">
+        </div>
+      </form>
+
+      <div class="nav navbar-nav navbar-right">
+        <button ng-show="!user" ui-sref="login" class="btn btn-default navbar-btn">Login</button>
+        <button ng-show="!user" ui-sref="signup" class="btn btn-default navbar-btn">Sign up</button>
+        <div ng-show="user" class="welcome dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome, {{ user.email }}! <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a ng-click="logout()">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 align="center">{{topic}}</h2>
+      <div class="timeline">
+        <dl>
+          <!-- <dt>Apr 2014</dt> -->
+          <dd class="clearfix" ng-class="article.docSentiment.type=='negative' ? 'pos-left' : 'pos-right'" ng-repeat="article in articles">
+            <div class="circ"></div>
+            <div class="time">{{article.timestamp*1000 | date:'MMM dd'}}</div>
+            <div class="events" ng-class="article.docSentiment.type=='negative' ? 'negative' : 'positive'">
+              <div class="pull-left">
+                <img class="events-object img-rounded" ng-src="{{article.image}}" style="width:50px;">
+              </div>
+              <div class="events-body">
+                <h4 class="events-heading">{{article.title}}</h4>
+                <!-- <p><i>{{article.source.enriched.url.author}}</i></p> -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <span ng-repeat="concept in article.concepts">
+                      <label class="label label-normal">{{concept}}</label>
+                    </span>
+                  </div>
+                </div>
+                
+                <p>{{article.text}}</p>
+                <!-- <a href="{{article.source.enriched.url.url}}">{{article.source.enriched.url.url}}</a> -->
+              </div>
+            </div>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>

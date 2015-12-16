@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 align="center">{{topic}}</h2>
+      <!-- <button class="btn btn-primary" ui-sref="summarizedTimeline({id:'donald-trump'})">Summarized timeline</button> -->
+      <div class="timeline">
+        <dl>
+          <!-- <dt>Apr 2014</dt> -->
+          <dd class="clearfix" ng-class="article.source.enriched.url.docSentiment.type=='negative' ? 'pos-left' : 'pos-right'" ng-repeat="article in articles">
+          <div class="circ"></div>
+          <div class="time">{{article.timestamp*1000 | date:'MMM dd'}}</div>
+          <div class="events" ng-class="article.source.enriched.url.docSentiment.type=='negative' ? 'negative' : 'positive'">
+            <div class="pull-left">
+              <!-- <img class="events-object img-rounded" src="img/photo-1.jpg"> -->
+            </div>
+            <div class="events-body">
+              <h4 class="events-heading">{{article.source.enriched.url.title}}</h4>
+              <p><i>{{article.source.enriched.url.author}}</i></p>
+              <div class="row">
+                <div class="col-md-12">
+                  <span ng-repeat="concept in article.source.enriched.url.concepts">
+                    <label class="label label-normal">{{concept.text}}</label>
+                  </span>
+                </div>
+              </div>
+              <p>
+                <div ng-repeat="entity in article.source.enriched.url.entities" ng-if="entity.quotations.length>0">
+                  <label class="label" ng-class="entity.sentiment.type=='positive' ? 'label-success' : 'label-danger'" >{{entity.text}}</label>
+                  
+                  
+                  <p ng-repeat="quotation in entity.quotations"><i>{{quotation.quotation}}</i></p>
+                </div>
+              </p>
+              <p>{{article.source.enriched.url.text}}</p>
+              <a href="{{article.source.enriched.url.url}}">{{article.source.enriched.url.url}}</a>
+            </div>
+          </div>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>

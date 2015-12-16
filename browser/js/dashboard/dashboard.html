@@ -1,0 +1,40 @@
+<section class="container top-padding">
+  <h5>Recommended Articles</h5>
+  <div class="row">
+    <div class="col-md-3" ng-repeat="article in recommendedArticles">
+      <a href="{{article.url}}">
+        <div class="jumbotron" style="height:450px;">
+          <div class="jumbotron-photo"><img style="height:200px;" src="{{article.image}}"></div>
+          <div class="jumbotron-contents">
+            <p><b>{{article.title}}</b></p>
+            <p><i>{{article.author}}</i></p>
+            <p>{{article.summary.slice(0,150)+"..."}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <hr>
+  <h5>Browsing History</h5>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>URL</th>
+        <th>Entities</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="article in browsingHistory | orderBy:'-date'">
+        <td>{{$index+1}}</td>
+        <td><a href="{{article.url}}">{{article.url}}</a></td>
+        <td>
+          <span class="label label-normal">{{article.entities[0]}}</span>
+          <span class="label label-normal">{{article.entities[1]}}</span>
+        </td>
+        <td>{{article.date | date:'mediumDate'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

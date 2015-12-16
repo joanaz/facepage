@@ -34,7 +34,6 @@
 :trollface:
 
 
-A small data recommendation system
 
 -
 ### Throughput
